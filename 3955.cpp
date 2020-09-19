@@ -4,6 +4,7 @@
 using namespace std;
 
 int n, a[1005], q;
+int mod[9] = { 0,10,100,1000,10000,100000,1000000,10000000,100000000 };
 
 inline int getmod(int x)
 {
@@ -32,8 +33,8 @@ int main()
 		cin >> l >> qi;
 		for (int j = 1; j <= n; j++)
 		{
-			if (a[i] % getmod(l) == qi) {
-				ans = a[i];
+			if (a[j] % mod[l] == qi) {
+				ans = a[j];
 				break;
 			}
 		}
